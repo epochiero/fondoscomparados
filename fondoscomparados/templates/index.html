@@ -5,16 +5,25 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="{% static 'Chart.min.js' %}"></script>
 </head>
 <body>
     <div align="center">
     <img src="{% static 'logo.png' %}"/>
-    </div>
-    <table>
-    {% for provincia in ppa %}
+
+    <h1>Distribución de Fondos para Viviendas por Año por Provincia</h1>
+    <table class="table tabel-hover" style="width:80%">
+    <th></th><th>2006</th><th>2007</th><th>2008</th><th>2009</th><th>2010</th><th>2011</th><th>2012</th><th>2013</th>
     <tr>
-    <td>{{provincia.provincia.nombre}}</td><td> {{provincia.monto}}</td>
-</tr>
-    {% endfor %}</table>
+    <td>{{ba.0.provincia.nombre}}</td>    {% for ppa in ba %}<td> {{ppa.monto}}</td>    {% endfor %}
+    </tr>
+    <tr>
+    <td>{{sf.0.provincia.nombre}}</td>    {% for ppa in sf %}<td> {{ppa.monto}}</td>    {% endfor %}
+    </tr>
+    <tr>
+    <td>{{er.0.provincia.nombre}}</td>    {% for ppa in er %}<td> {{ppa.monto}}</td>    {% endfor %}
+    </tr>
+    </table>
+        </div>
 </body>
 </html>
