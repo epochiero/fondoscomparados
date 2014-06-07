@@ -46,6 +46,13 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'fondoscomparados/templates'),
 )
 
+PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_PATH, 'static'),
+)
 ROOT_URLCONF = 'fondoscomparados.urls'
 
 WSGI_APPLICATION = 'fondoscomparados.wsgi.application'
