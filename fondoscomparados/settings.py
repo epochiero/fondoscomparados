@@ -16,7 +16,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 import dj_database_url
 DATABASES = {}
 DATABASES['default'] =  dj_database_url.config()
-
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
