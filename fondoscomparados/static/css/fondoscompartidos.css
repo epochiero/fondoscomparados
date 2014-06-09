@@ -1,0 +1,46 @@
+body {background:#fafafa}
+.gde {font-size:100px; width:100%}
+.items {font-size:48px; letter-spacing:-3px;}
+.afinidad-1 {color:#0b6693}
+.afinidad-3 {color:#ad3d3d}
+.afinidad-2 {color:#ccc}
+.nro, .nro2, .nro3, .nro4 {font-weight: 700; text-align:center}
+.nro {font-size:30px; letter-spacing:-2px;}
+.nro2 {font-size:22px; letter-spacing:-1px;}
+.nro3 {font-size:40px; letter-spacing:-2px;}
+.nro4 {font-size:16px; letter-spacing:-1px;}
+.centrado {padding:5px; border:1px dashed #ddd; border-radius:10px; padding:5px;}
+.centrado, .centrado2 {text-align:center; height:120px}
+.pt3{ padding-top:3px;}
+.pt4{ padding-top:4px;}
+.pt5{ padding-top:5px;}
+.pt7{ padding-top:7px;}
+.pt10{ padding-top:10px;}
+.pt13{ padding-top:13px;}
+.pb10{ padding-bottom:10px;}
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+}
+html,
+body {
+  height: 100%;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+body {
+background: url(../img/bck.jpg) no-repeat center center fixed;
+box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.ref1, .ref2, .ref3{height:20px; width:20px; border-radius:20px;float:left;}
+.ref1{background:#0b6693;}
+.ref2{background:#ccc;}
+.ref3{background:#ad3d3d;}
+.separador{margin-left:10px; margin-right:10px; float:left; color:#ccc}
+.reftext{padding-left:5px;}
+.actual{color:#C60; font-weight:700}
+.p10{padding:10px;}
