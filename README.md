@@ -3,4 +3,4 @@ fondoscomparados
 
 Fondos Comparados
 
-www.fondoscomparados.com
+fondoscomparados.herokuapp.com

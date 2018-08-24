@@ -1,6 +1,5 @@
-from django.shortcuts import render_to_response
-from django.template import RequestContext
-from models import *
+from django.shortcuts import render
+from .models import *
 
 
 def index(request, template="index.html"):
@@ -13,4 +12,4 @@ def index(request, template="index.html"):
     data['sf'] = ProvinciaPorAnio.objects.filter(provincia__nombre="Santa Fe", anio=year)
     data['er'] = ProvinciaPorAnio.objects.filter(provincia__nombre="Entre Rios", anio=year)
     data['year'] = year
-    return render_to_response(template, data, context_instance=RequestContext(request))
+    return render(request, template, data)

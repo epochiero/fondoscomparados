@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 import sys
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-DEBUG=os.environ.get('DEBUG', False)
+DEBUG = os.environ.get('DEBUG') == 'True'
 import dj_database_url
 DATABASES = {}
 DATABASES['default'] =  dj_database_url.config()
@@ -42,9 +42,15 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'fondoscomparados/templates'),
-)
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            BASE_DIR + '/fondoscomparados/templates',
+        ],
+    }
+]
+
 
 PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
